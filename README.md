@@ -23,9 +23,9 @@
 ```shell
 #读取hash值
 #cer证书文件
-openssl x509 -inform DER -subject_hash_old -in xxxx.cer
+openssl x509 -inform DER -subject_hash_old -in xxxx.cer | head -n 1
 #pem证书文件
-openssl x509 -inform PEM -subject_hash_old -in xxxx.pem
+openssl x509 -inform PEM -subject_hash_old -in xxxx.pem | head -n 1
 
 #根据hash值生成证书
 #cer证书文件
