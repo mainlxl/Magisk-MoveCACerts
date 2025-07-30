@@ -11,3 +11,25 @@
 4. 将 `Magisk-MoveCACerts.zip` 导入到手机，在 Magisk 从本地选择 `Magisk-MoveCACerts.zip` 文件，安装模块。
 
 ⚠️ 注意：如果手机已经安装了模块，后续追加的证书可以直接放入 `/data/adb/modules/MoveCACerts/system/etc/security/cacerts/` 目录下，再重启手机即可。
+
+
+```shell
+#系统证书路径  
+/system/etc/security/cacerts
+#用户证书路径
+/data/misc/user/0/cacerts-added
+```
+
+```shell
+#读取hash值
+#cer证书文件
+openssl x509 -inform DER -subject_hash_old -in xxxx.cer
+#pem证书文件
+openssl x509 -inform PEM -subject_hash_old -in xxxx.pem
+
+#根据hash值生成证书
+#cer证书文件
+openssl x509 -inform DER -text -in xxxx.cer > 哈希值xxx.0
+#pem证书文件
+openssl x509 -inform PEM -text -in xxxx.pem > 哈希值xxx.0
+```
