@@ -33,4 +33,6 @@
 # 用户证书路径
 /data/misc/user/0/cacerts-added
 ```
-感谢https://github.com/wjf0214/Magisk-MoveCACerts
+参考:
+https://github.com/wjf0214/Magisk-MoveCACerts
+https://github.com/ys1231/MoveCertificate
